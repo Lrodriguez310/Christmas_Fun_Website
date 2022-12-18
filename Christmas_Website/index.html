@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html>
+    <head>
+
+        <link href="assets/favicon.png" rel="icon">
+        <link href="assets/favicon.png" rel="apple-touch-icon">
+        <!-- TITLE -->
+        <title>Christmas</title>
+        <!-- WEBSITE'S FAVICON -->
+        
+        <!-- VIEW -->
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="style.css">
+        <!-- FONTS -->
+        
+        <!-- SWIPER.JS -->
+
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"/>
+        <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+
+
+       
+        <!-- REMIX ICONS -->
+        <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
+        <!-- Jquery -->
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.2/jquery.min.js"></script>
+        
+    </head>
+    <body>
+
+        <!------------- PRELOADER ------------->
+
+        <div class="preloader">
+            <div class="loader"></div>
+        </div>
+
+        <!------------- SCROLL TO TOP BUTTON ------------->
+        <div id="scrollToTopBtn" onclick="scrollToTop()">
+            <i class="ri-arrow-up-line"></i>
+        </div>
+        <!------------- HEADER ------------->
+
+        <div class="home" id="home">
+            <nav>
+                <div class="nav-logo">
+                   <img src="assets/favicon.png">
+                   <h2 id="company">Christmas</h2>
+                </div>
+                <div class="nav-menu" id="nav-menu">
+                    <ul class="nav-list">
+                        
+                        
+                        <li>
+                            <a class="ri-home-3-line icon" href="#home"></a>
+                            <a href="#home" class="pages">Home</a>
+                        </li>
+                        
+                        
+                        <li>
+                            <a class="ri-store-2-line icon" href="#shop"></a>
+                            <a href="#shop" class="pages">Shop</a>
+                        </li>
+
+
+                        <li>
+                            <a class="ri-star-smile-line icon" href="#share"></a>
+                            <a href="#share" class="pages">Share</a>
+                        </li>
+
+
+                        <li>
+                            <a class="ri-emotion-line icon" href="#party"></a>
+                            <a href="#party" class="pages">Party</a>
+                        </li>
+                    </ul>
+                    <div class="nav-close" id="nav-close" onclick="hideNav()">
+                        <i class="ri-close-line"></i>
+                    </div>
+                    <img src="assets/christmas-banner.png" id="banner">
+
+                    
+                </div>
+
+                <i class="ri-moon-line" id="moon" onclick="changeToDark()"></i>
+                <i class="ri-sun-line" id="sun" onclick="changeToLight()"></i>
+
+                <div class="nav-toggle" id="nav-toggle" onclick="showNav()">
+                    <i class="ri-apps-line"></i>
+                </div>
+
+             </nav>
+
+             <div class="header" id="header">
+                <img src="assets/christmas-tree.png">
+                <div class="content" data-inViewport='slideTop'>
+                    <h2 id="title">Merry Christmas!</h2>
+                    <p>
+                        Christmas is a time to worship the God who created us and to<br>
+                        honor His sacrifice for the sins of the world. This is a great<br>
+                        time to thank Jesus for all He has done for us.
+                    </p>
+                    <button onclick="scrollToShop()">Explore</button>
+                </div>
+             </div>
+        </div>
+              
+        <!------------- GIFT SHOP ------------->
+
+        <div class="gifts" id="shop">
+            <h2>Gift Shop</h2>
+            <p>
+                Holiday gifts for you or your loved ones!
+            </p>
+            <div class="items">
+                <div data-inViewport='slideTop'>
+                    <img src="assets/christmas-cup.png" id="cup">
+                    <span>Ceramic Cup <br><span class="price">$15</span></span>
+                    <button class="add" id="add1">Add To Cart</button>
+
+                </div>
+
+
+
+                <div data-inViewport='slideTop'>
+                    <img src="assets/coat.png" id="coat">
+                    <span>Christmas Sweater <br><span class="price">$25</span></span>
+                    <button class="add" id="add2">Add To Cart</button>
+
+                </div>
+
+
+                <div data-inViewport='slideTop'>
+                    <img src="assets/sock.png" id="socks">
+                    <span>Christmas Socks <br><span class="price">$10</span></span>
+                    <button class="add" id="add3">Add To Cart</button>
+                </div>
+
+
+
+                <div data-inViewport='slideTop'>
+                    <img src="assets/snow-globe.png" id="globe">
+                    <span>Snow Globe <br><span class="price">$20</span></span>
+                    <button class="add" id="add4">Add To Cart</button>
+
+                </div>
+                
+            </div>
+
+            <!-- pop up -->
+
+            <div class="pop-up popup1" id="pop-up1">
+                <span class="close close1">&times;</span>
+                <img class="pop-up-content" id="christmas-cup">
+            </div>
+
+            <div class="pop-up popup2" id="pop-up2">
+                <span class="close close2">&times;</span>
+                <img class="pop-up-content" id="winter-coat">
+            </div>
+
+            <div class="pop-up popup3" id="pop-up3">
+                <span class="close close3">&times;</span>
+                <img class="pop-up-content" id="sock">
+            </div>
+
+            <div class="pop-up popup4" id="pop-up4">
+                <span class="close close4">&times;</span>
+                <img class="pop-up-content" id="snowGlobe">
+            </div>
+
+
+        </div>
+        
+        <!------------- SHARE A GIFT ------------->
+
+        <div class="share" id="share">
+            <img src="assets/jingle-bells.png">
+            <h2>Share A Gift</h2>
+            <p data-inViewport='slideLeft'>Buy A Gift And Leave An Impression<br>On That Special Someone!</p>
+
+            <!-- swiper -->
+
+            <div class="swiper mySwiper" data-inViewport='slideTop'>
+                <div class="swiper-wrapper">
+                 
+                    <div class="swiper-slide">
+                        <i class="ri-share-forward-line"></i>
+                        <h2>Candy Cane <br> $4</h2>
+                        <img src="assets/candy-cane.png">
+                  </div>
+                  
+                  <div class="swiper-slide">
+                    <i class="ri-share-forward-line"></i>
+                        <h2>Snowman <br> $5</h2>
+                        <img src="assets/snowman.png">
+                  </div>
+                  
+                  <div class="swiper-slide">
+                    <i class="ri-share-forward-line"></i>
+                        <h2>Santa Clause Hat <br> $100</h2>
+                        <img src="assets/santa-hat.png">
+                  </div>
+                  
+                  <div class="swiper-slide">
+                    <i class="ri-share-forward-line"></i>
+                        <h2>Gingerbread Man <br> $60</h2>
+                        <img src="assets/gingerbread-man.png">
+                  </div>
+                 
+                </div>
+                
+                <div class="swiper-pagination">
+
+                </div>
+              </div>
+
+
+        </div>
+
+        <!------------- PARTY ------------->
+
+        <div class="party" id="party">
+            <h2>Party</h2>
+            
+            <div class="signup" data-inViewport='slideLeft'>
+                <p>Sign up to receive an email on the secret party being held somewhere in Kentucky.<br>
+                    You may cancel your subscription at anytime.
+                </p>
+            
+            <form>
+                <input type="email" placeholder="email address" id="email" autocomplete="off" required="required">
+                <button type="submit" class="signUp" onclick="signUp()">Sign Up</button>
+            </form>
+            <img src="assets/christmas-label.jpg">
+        </div>
+        </div>
+
+        
+
+        <!------------- FOOTER ------------->
+
+        <div class="footer">
+            <div class="links">
+                <ul>
+                    <h2>Overview</h2>
+                    <li><a href="#">Prices</a></li>
+                    <li><a href="#">Promotions</a></li>
+                    <li><a href="#">Privacy & Policy</a></li>
+                </ul>
+                <ul>
+                    <h2>Others</h2>
+                    <li><a href="#">Donate</a></li>
+                    <li><a href="#">Support</a></li>
+                    <li><a href="#">Our Team</a></li>
+                </ul>
+            </div>
+           <p> © Copyright 2022. Luis Rodriguez Owner of "U Ready?" <br>
+            Images by <a href='https://iconscout.com/contributors/iconscout'>IconScout Store, <a href='https://iconscout.com/contributors/iqonic-design'>iqonic.design</a>, and <a href='https://www.freepik.com/'>Freepik</a></p>
+        
+            <img src="assets/fireplace.jpg">
+            <img src="assets/snowflake.jpg" id="snowflake">
+            <img src="assets/snowflake.png">
+            <img src="assets/jingle-bells.png">
+        </div>
+        
+        
+        <!-- SCRIPT -->
+        <script src="main.js"></script>
+    </body>
+</html>
